@@ -27,19 +27,23 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
       <header className="max-w-4xl mx-auto mb-16">
         <div>
           <h1 className="text-5xl font-extrabold mb-6 text-balance">
-            How <span className="hover:underline">
+            How{" "}
+            <span className="hover:underline">
               <a
-                href="https://robotostudio.com/"
+                href="https://robotostudio.com?ref=show-and-tell"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Roboto Studio
               </a>
-            </span> ships faster with v0
+            </span>{" "}
+            ships faster with v0
           </h1>
           <p className="text-xl text-balance">
-            We are a boutique web development studio that creates the very best editorial experiences on the web. 
-            We build extraordinarily fast and scalable websites leveraging generative AI.
+            We are a boutique web development studio that creates the
+            very best editorial experiences on the web. We build
+            extraordinarily fast and scalable websites leveraging
+            generative AI.
           </p>
         </div>
       </header>
@@ -48,12 +52,14 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         <div key={index} className="relative">
           <div className="max-w-4xl mx-auto bg-[#F5F5F5] border border-gray-200 rounded-lg p-8">
             <div className="mb-8">
-              <h2 className="text-4xl font-extrabold mb-4">{project.title}</h2>
+              <h2 className="text-4xl font-extrabold mb-4">
+                {project.title}
+              </h2>
               <div className="space-y-1">
                 {project.links.map((link, linkIndex) => (
-                  <a 
+                  <a
                     key={linkIndex}
-                    href={link.url} 
+                    href={link.url}
                     className="flex items-center text-base hover:bg-gray-200 transition-colors p-1 rounded"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -95,9 +101,10 @@ export function ProjectShowcase({ projects }: ProjectShowcaseProps) {
         </div>
       ))}
       <footer className="text-center text-sm text-gray-500 mt-16">
-        Built with ❤️ & v0.dev, approximately 3 hours before the presentation
+        Built with ❤️ & v0.dev, approximately 3 hours before the
+        presentation
       </footer>
     </div>
-  )
+  );
 }
 
